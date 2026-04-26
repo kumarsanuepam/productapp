@@ -1,0 +1,12 @@
+
+curl -X POST http://16.170.238.148:8080/products \
+  -H "Content-Type: application/json" \
+  -d '{
+    "id": 1,
+    "name": "Laptop",
+    "price": 65000
+  }'
+
+curl http://16.170.238.148:8080/products
+
+curl http://16.170.238.148:8080/products/1
