@@ -40,4 +40,8 @@ jobs:
             pgrep -f productapp-0.0.1-SNAPSHOT.jar | xargs -r kill
             sleep 2
             echo "Starting app..."
-            nohup java -jar /home/ec2-user/productapp-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
+            nohup java -jar /home/ec2-user/productapp-0.0.1-SNAPSHOT.jar \
+            </dev/null >/home/ec2-user/app.log 2>&1 &
+            disown
+            exit 0
+
